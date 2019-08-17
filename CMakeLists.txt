@@ -13,3 +13,6 @@ get_filename_component(SCRIPTS_DIR "scripts" REALPATH)
 
 # Include macro definitions
 include(cmake/macros.cmake)
+
+# Include submodule dependencies
+add_subdirectory(submodules)
