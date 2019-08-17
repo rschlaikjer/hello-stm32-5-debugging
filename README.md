@@ -13,6 +13,8 @@ toolchain.
 To build:
 
 ```
+git submodule init
+git submodule update
 mkdir build
 cmake ../
 make
