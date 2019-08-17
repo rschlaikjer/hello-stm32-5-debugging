@@ -1,0 +1,114 @@
+#pragma once
+
+#if not defined(STM32F7)
+#error "Atempting to import STM32F7 fault handlers, but STM family not defined!"
+#endif
+
+void nvic_wwdg_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void pvd_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tamp_stamp_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void rtc_wkup_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void flash_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void rcc_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void exti0_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void exti1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void exti2_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void exti3_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void exti4_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma1_stream0_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma1_stream1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma1_stream2_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma1_stream3_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma1_stream4_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma1_stream5_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma1_stream6_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void adc_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void can1_tx_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void can1_rx0_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void can1_rx1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void can1_sce_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void exti9_5_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim1_brk_tim9_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim1_up_tim10_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim1_trg_com_tim11_isr(void)
+    __attribute__((weak, alias("hard_fault_handler")));
+void tim1_cc_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim2_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim3_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim4_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void i2c1_ev_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void i2c1_er_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void i2c2_ev_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void i2c2_er_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void spi1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void spi2_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void usart1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void usart2_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void usart3_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void exti15_10_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void rtc_alarm_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void usb_fs_wkup_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim8_brk_tim12_isr(void)
+    __attribute__((weak, alias("hard_fault_handler")));
+void tim8_up_tim13_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim8_trg_com_tim14_isr(void)
+    __attribute__((weak, alias("hard_fault_handler")));
+void tim8_cc_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma1_stream7_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void fsmc_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void sdmmc1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim5_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void spi3_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void uart4_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void uart5_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim6_dac_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void tim7_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2_stream0_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2_stream1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2_stream2_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2_stream3_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2_stream4_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void eth_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void eth_wkup_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void can2_tx_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void can2_rx0_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void can2_rx1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void can2_sce_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void otg_fs_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2_stream5_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2_stream6_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2_stream7_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void usart6_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void i2c3_ev_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void i2c3_er_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void otg_hs_ep1_out_isr(void)
+    __attribute__((weak, alias("hard_fault_handler")));
+void otg_hs_ep1_in_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void otg_hs_wkup_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void otg_hs_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dcmi_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void cryp_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void hash_rng_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void fpu_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void uart7_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void uart8_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void spi4_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void spi5_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void spi6_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void sai1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void lcd_tft_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void lcd_tft_err_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dma2d_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void sai2_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void quadspi_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void lp_timer1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void hdmi_cec_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void ic24_ev_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void ic24_er_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void spdifrx_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dsihost_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dfsdm1_flt0_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dfsdm1_flt1_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dfsdm1_flt2_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void dfsdm1_flt3_isr(void) __attribute__((weak, alias("hard_fault_handler")));
+void sdmmc2_isr(void) __attribute__((weak, alias("hard_fault_handler")));

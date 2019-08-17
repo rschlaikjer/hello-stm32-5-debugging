@@ -3,6 +3,7 @@ enable_language(C CXX)
 project(common C CXX)
 
 set(SRCS
+    ${PROJECT_SOURCE_DIR}/src/arm/mpu.cpp
     ${PROJECT_SOURCE_DIR}/src/arm/scb.cpp
     ${PROJECT_SOURCE_DIR}/src/instrumentation/fault_handler.cpp
 )

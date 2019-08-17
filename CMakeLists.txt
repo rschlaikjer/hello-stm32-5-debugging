@@ -38,3 +38,6 @@ set(CXXFLAGS
 
 # STM32F0 interrupt fault example
 add_subdirectory(interrupt_fault_example)
+
+# STM32F7 memory fault example
+add_subdirectory(memory_fault_example)
