@@ -11,3 +11,5 @@ project(stm32_with_opencm3_5 C CXX)
 get_filename_component(LINKERSCRIPT_DIR "ldscripts" REALPATH)
 get_filename_component(SCRIPTS_DIR "scripts" REALPATH)
 
+# Include macro definitions
+include(cmake/macros.cmake)
