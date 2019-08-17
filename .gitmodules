@@ -1,3 +1,6 @@
 [submodule "submodules/libopencm3"]
 	path = submodules/libopencm3
 	url = https://github.com/libopencm3/libopencm3.git
+[submodule "submodules/printf"]
+	path = submodules/printf
+	url = https://github.com/mpaland/printf.git
