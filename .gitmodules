@@ -1,0 +1,3 @@
+[submodule "submodules/libopencm3"]
+	path = submodules/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git
