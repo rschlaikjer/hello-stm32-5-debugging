@@ -40,7 +40,7 @@ static const char *system_interrupt_names[16] = {
     "Reserved",     "Reserved", "Reserved",   "SVCall",
     "DebugMonitor", "Reserved", "PendSV",     "SysTick"};
 
-void dump_stack(uint32_t stack[]) {
+void dump_registers(uint32_t stack[]) {
   static char msg[80];
   sprintf_(msg, "r0  = 0x%08x\r\n", stack[r0]);
   fault_handler_printf(msg);
@@ -74,8 +74,8 @@ void base_fault_handler(uint32_t stack[]) {
   }
   fault_handler_printf(buf);
 
-  fault_handler_printf("Stacktrace:\r\n");
-  dump_stack(stack);
+  fault_handler_printf("Saved register state:\r\n");
+  dump_registers(stack);
   __asm volatile("BKPT #01");
   while (1) {
   }

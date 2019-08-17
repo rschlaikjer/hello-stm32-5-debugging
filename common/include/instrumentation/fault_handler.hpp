@@ -8,7 +8,7 @@
 
 extern "C" {
 void base_fault_handler(uint32_t stack[]);
-void dump_stack(uint32_t stack[]);
+void dump_registers(uint32_t stack[]);
 }
 
 #if defined(STM32F0)
